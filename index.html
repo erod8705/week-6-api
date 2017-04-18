@@ -68,7 +68,7 @@ var animals = ["Dog", "Cat", "Bird"];
  		console.log(x);
 
  // This is our info to point to our API databae
- 		var queryURL = "http://api.giphy.com/v1/gifs/search?q="+x+"&api_key=dc6zaTOxFJmzC&limit=10";
+ 		var queryURL = "https://api.giphy.com/v1/gifs/search?q="+x+"&api_key=dc6zaTOxFJmzC&limit=10";
  		$.ajax({url:queryURL,method:"GET"})
  		.done(function(response){
  			console.log(response);
