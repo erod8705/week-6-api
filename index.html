@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>GIFtastic!</title>
+
+<!--Link for Bootstrap-->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+</head>
+<body>
+<script type="text/javascript" src="assets/javascript/api.js"></script>
+ <script src="https://code.jquery.com/jquery.js"></script>
+
+   <!-- Rendered buttons will get dumped Here  -->
+	 <div id="buttons-view">
+	 <button data-animal="cat">Cat</button>
+	 <button data-animal="dog">Dog</button>
+	 <button data-animal="bird">Bird</button>
+
+	 </div> 
+<div class="panel-heading">
+	<form id="gif-add-input">
+	      <label for="gif-input">Add an animal</label>
+	      <input type="text" id="gif-input"><br>
+
+	      <!-- Button triggers new animal button to be added -->
+	      <input id="add-gif" type="submit" value="Add an animal">
+	    </form>
+</div>
+
+
+</body>
+</html>
