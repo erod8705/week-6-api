@@ -82,21 +82,21 @@ var animals = ["Dog", "Cat", "Bird"];
  //creates the image tag for all of the gifs and sets different attributes for the different state 
  // of the gif. We'll need this later so we can pause the gif using the on click function. 
   				var animalImage = $('<img>');
- 				animalImage.attr('src',response.data[i].images.fixed_height_still.url);
- 				animalImage.attr('data-still',response.data[i].images.fixed_height_still.url);
- 				animalImage.attr('data-animate',response.data[i].images.fixed_height.url);
+ 				animalImage.attr('src',response.data[i].images.fixed_height_still.url.replace(/^http:\/\//i, 'https://'));
+ 				animalImage.attr('data-still',response.data[i].images.fixed_height_still.url.replace(/^http:\/\//i, 'https://'));
+ 				animalImage.attr('data-animate',response.data[i].images.fixed_height.url.replace(/^http:\/\//i, 'https://'));
  				animalImage.attr('data-state',"still");
  				animalImage.addClass("gif");
 
  				animalDiv.append(p);
  				animalDiv.append(animalImage);
- 				$('#gifs-go-here').append(animalDiv);
+ 				$('#gifs-go-here').prepend(animalDiv);
 
 //here is our on click function to start and stop the gifs once loaded onto the page
  				
  			} //end of the for loop
 
- 			$("img").on("click", function() {
+ 			$(document).on("click", "img", function() {
       // The attr jQuery method allows us to get or set the value of any attribute on our HTML element
       var state = $(this).attr("data-state");
       // If the clicked image's state is still, update its src attribute to what its data-animate value is.
