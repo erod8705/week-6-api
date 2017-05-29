@@ -2,9 +2,9 @@
 
 Overview
 
-This is a dynamic site which populates the page based on users preferences of GIPH animal moving images. The site uses a GIPHY API. 
+This is a dynamic site which populates the page based on users preferences of GIF animal moving images. The site uses a GIPHY API. 
 
-#Technology Used 
+# Technology Used 
 - JavaScript 
 - JQuery 
 - HTML 
